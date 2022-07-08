@@ -1,9 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * * _isupper shows the input char is uppercase or lower case
+ * *_isupper - Shows 1 if the input is A
+ * *uppercase character. Another cases, shows
  * *@c: is character
- * *Returns always 1 for upper case and 0 for lower case
+ * *Return: always 1 for uppercase and 0 for lowercase
  */
 int _isupper(int c)
 {
