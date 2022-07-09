@@ -1,6 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 
+/*
+ * print_square - prints square
+ * @size: the size of the square
+ */
 void print_square(int size)
 {
 	int i, j;
