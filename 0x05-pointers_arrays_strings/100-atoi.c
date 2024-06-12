@@ -16,33 +16,26 @@ int _atoi(char *s)
 	while (*(i + s))
 	{
 		if (*(i + s) == '-')
-		{
 			sign = sign * -1;
-		}
 		if (*(i + s) == '+')
-		{
 			sign = sign * 1;
-		}
 		if (*(i + s) >= '0' && *(i + s) <= '9')
 		{
 			int d = *(i + s) - '0';
 
 			digit = digit * pow;
-			digit = digit + d;
+			if (digit == 2147483640 && d == 8)
+				digit = -2147483648;
+			else
+				digit = digit + d;
 			pow = 10;
 		}
 		else if (pow == 10 && !(*(i + s) >= '0' && *(i + s) <= '9'))
-		{
 			return (digit * sign);
-		}
 		i++;
 	}
 	if (digit == 0)
-	{
 		return (0);
-	}
 	else
-	{
 		return (digit * sign);
-	}
 }
