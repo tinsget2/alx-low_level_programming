@@ -24,10 +24,9 @@ int _atoi(char *s)
 			int d = *(i + s) - '0';
 
 			digit = digit * pow;
-			if (digit == 2147483640 && d == 8)
-				digit = -2147483648;
-			else
-				digit = digit + d;
+			if (digit == 2147483640 && d == 8 && sign == -1)
+				return (digit = -2147483648);
+			digit = digit + d;
 			pow = 10;
 		}
 		else if (pow == 10 && !(*(i + s) >= '0' && *(i + s) <= '9'))
